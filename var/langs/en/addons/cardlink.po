@@ -1,0 +1,147 @@
+msgid ""
+msgstr "Project-Id-Version: tygh\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US"
+
+msgctxt "Addons::name::cardlink"
+msgid "Cardlink eCommerce Checkout Payment Gateway "
+msgstr "Cardlink eCommerce Checkout Payment Gateway  Payment Gateway"
+
+msgctxt "Addons::description::cardlink"
+msgid "Cardlink eCommerce Checkout Payment Gateway allows you to accept payment through various schemes such as Visa, Mastercard, Maestro, American Express, Diners, Discover cards on your CS-Cart powered site"
+msgstr "Cardlink  eCommerce Checkout Payment Gateway allows you to accept payment through various schemes such as Visa, Mastercard, Maestro, American Express, Diners & Discover cards on your CS-Cart powered site"
+
+
+
+msgctxt "Languages::cardlink.select_your_card"
+msgid "Select your card"
+msgstr "Select your card"
+
+
+msgctxt "Languages::cardlink.remove_card"
+msgid "Remove card"
+msgstr "Remove card"
+
+msgctxt "Languages::cardlink.add_credit_card"
+msgid "Add your credit card"
+msgstr "Add your credit card"
+
+
+msgctxt "Languages::cardlink.store_my_card"
+msgid "Store my card"
+msgstr "Store my card"
+
+
+msgctxt "Languages::cardlink.select_installments"
+msgid "Select Installments"
+msgstr "Select Installments"
+
+msgctxt "Languages::cardlink.no_installments"
+msgid "No Installments"
+msgstr "No Installments"
+
+msgctxt "Languages::cardlink.installments"
+msgid "Installments"
+msgstr "Installments"
+
+msgctxt "Languages::cardlink.custom_css"
+msgid "Custom CSS"
+msgstr "Custom CSS"
+
+
+msgctxt "Languages::cardlink.custom_css_tip"
+msgid "Url of custom CSS stylesheet, to be used to display payment page styles."
+msgstr "Url of custom CSS stylesheet, to be used to display payment page styles."
+
+
+msgctxt "Languages::cardlink.pre_authorize"
+msgid "Pre Authorize"
+msgstr "Pre Authorize"
+
+msgctxt "Languages::cardlink.pre_authorize_tip"
+msgid "Default payment method is Purchase, enable for Pre-Authorized payments. You will then need to accept them from Cardlink eCommerce Tool."
+msgstr "Default payment method is Purchase, enable for Pre-Authorized payments. You will then need to accept them from Cardlink eCommerce Tool."
+
+
+msgctxt "Languages::cardlink.store_cards"
+msgid "Store card details"
+msgstr "Store card details"
+
+msgctxt "Languages::cardlink.store_cards_tip"
+msgid "If checked the user will have the ability to store credit card details for future purchases. You must contact Cardlink first.<br /> Disabled when iframe mode is ON."
+msgstr "If checked the user will have the ability to store credit card details for future purchases. You must contact Cardlink first.<br /> Disabled when iframe mode is ON."
+
+
+msgctxt "Languages::cardlink.enable_iframe"
+msgid "Enable payment iframe"
+msgstr "Enable payment iframe"
+
+
+msgctxt "Languages::cardlink.enable_iframe_tip"
+msgid "Customers will stay in website to complete payments without redirecting to Cardlink's eCommerce payment page.<br />You must have a valid SSL certificate installed on your domain.<br />Not recommended bacause some functionality will be unavailable. For example, the customer won’t be able to subscribe for newsletters at checkout."
+msgstr "Customers will stay in website to complete payments without redirecting to Cardlink's eCommerce payment page.<br />You must have a valid SSL certificate installed on your domain."
+
+msgctxt "Languages::cardlink.language"
+msgid "Language"
+msgstr "Language"
+
+
+msgctxt "Languages::cardlink.english"
+msgid "English"
+msgstr "English"
+
+
+msgctxt "Languages::cardlink.greek"
+msgid "Greek"
+msgstr "Greek"
+
+msgctxt "Languages::cardlink.test_live_mode"
+msgid "Test/Live mode"
+msgstr "Test/Live mode"
+
+
+msgctxt "Languages::cardlink.test"
+msgid "Test mode"
+msgstr "Test mode"
+
+
+msgctxt "Languages::cardlink.live"
+msgid "Live mode"
+msgstr "Live mode"
+
+
+msgctxt "Languages::cardlink.acquirer"
+msgid "Acquirer"
+msgstr "Acquirer"
+
+
+msgctxt "Languages::cardlink.min_amount"
+msgid "Min Amount"
+msgstr "Min Amount"
+
+
+msgctxt "Languages::cardlink.number_of_installments"
+msgid "Number of installments"
+msgstr "Number of installments"
+
+msgctxt "Languages::cardlink.unexpected_error"
+msgid "Unexpected error received"
+msgstr "Unexpected error received"
+
+msgctxt "Languages::cardlink.preauth_expired"
+msgid "Preauthorized Transaction has expired"
+msgstr "Preauthorized Transaction has expired"
+
+msgctxt "Languages::cardlink.preauth_canceled"
+msgid "Merchant cancelled the pre-auth transaction"
+msgstr "Merchant cancelled the pre-auth transaction"
+
+
+msgctxt "Languages::cardlink.unknown_error"
+msgid "Unknown error received"
+msgstr "Unknown error received"
+
+msgctxt "Languages::cardlink.digest_wrong"
+msgid "Digest was wrong! Possible fraud"
+msgstr "Digest was wrong! Possible fraud"

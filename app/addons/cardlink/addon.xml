@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>cardlink</id>
+    <name>Cardlink</name>
+    <version>1.0</version>
+    <priority>1</priority>
+    <status>active</status>
+    <default_language>en</default_language>
+    <compatibility>
+        <core_version>
+            <min>4.0.3</min>
+        </core_version>
+        <core_edition>
+            ULTIMATE,MULTIVENDOR
+        </core_edition>
+    </compatibility>
+    <functions>
+        <item for="install">fn_cardlink_install</item>
+        <item for="uninstall">fn_cardlink_uninstall</item>
+    </functions>
+    <authors>
+        <author>
+            <name>Novidea</name>
+            <url>https://novidea.gr</url>
+        </author>
+    </authors>
+    <has_icon>Y</has_icon>
+    <supplier>Cardlink</supplier>
+</addon>

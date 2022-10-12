@@ -1,0 +1,149 @@
+msgid ""
+msgstr "Project-Id-Version: tygh\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Greek\n"
+"Language: el_GR"
+
+msgctxt "Addons::name::cardlink"
+msgid "Cardlink eCommerce Checkout Payment Gateway "
+msgstr "Πύλη πληρωμών Cardlink"
+
+msgctxt "Addons::description::cardlink"
+msgid "Cardlink eCommerce Checkout Payment Gateway allows you to accept payment through various channels such as Visa, Mastercard, Maestro, American Express, Diners, Discover cards on your CS-Cart powered site"
+msgstr "Η πύλη πληρωμών Cardlink eCommerce Checkout Payment Gateway σας επιτρέπει να λαμβάνεται πληρωμές στο CS-Cart e-shop σας μέσω διαφορετικών σχημάτων, όπως Visa, Mastercard, Maestro, American Express, Diners και Discover"
+
+
+
+msgctxt "Languages::cardlink.select_your_card"
+msgid "Select your card"
+msgstr "Επιλέξτε μια απο τις αποθηκευμένες κάρτες σας"
+
+
+msgctxt "Languages::cardlink.remove_card"
+msgid "Remove card"
+msgstr "Διαγραγή κάρτας"
+
+msgctxt "Languages::cardlink.add_credit_card"
+msgid "Add your credit card"
+msgstr "Προσθήκη κάρτας"
+
+
+msgctxt "Languages::cardlink.store_my_card"
+msgid "Store my card"
+msgstr "Αποθήκευσε την κάρτα μου"
+
+
+msgctxt "Languages::cardlink.select_installments"
+msgid "Select Installments"
+msgstr "Επιλέξτε αριθμό δόσεων"
+
+msgctxt "Languages::cardlink.no_installments"
+msgid "No Installments"
+msgstr "Χωρίς Δόσεις"
+
+msgctxt "Languages::cardlink.installments"
+msgid "Installments"
+msgstr "Δόσεις"
+
+msgctxt "Languages::cardlink.custom_css"
+msgid "Custom CSS"
+msgstr "Αρχείο CSS"
+
+
+msgctxt "Languages::cardlink.custom_css_tip"
+msgid "Url of custom CSS stylesheet, to be used to display payment page styles."
+msgstr "URL του CSS stylesheet που θα χρησιμοποιηθεί για την εμφάνιση των σελίδων πληρωμής."
+
+
+msgctxt "Languages::cardlink.pre_authorize"
+msgid "Pre Authorize"
+msgstr "Προ-έγκριση"
+
+msgctxt "Languages::cardlink.pre_authorize_tip"
+msgid "Default payment method is Purchase, enable for Pre-Authorized payments. You will then need to accept them from Cardlink eCommerce Tool."
+msgstr "Η προεπιλεγμένη μέθοδος πληρωμής είναι η Αγορά. Ενεργοποιήστε τις πληρωμές με Προέγκριση. Στη συνέχεια θα πρέπει να τις αποδεχτείτε από το Cardlink Payment Gateway."
+
+
+msgctxt "Languages::cardlink.store_cards"
+msgid "Store card details"
+msgstr "Αποθήκευση των στοιχείων της κάρτας"
+
+msgctxt "Languages::cardlink.store_cards_tip"
+msgid "If checked the user will have the ability to store credit card details for future purchases. You must contact Cardlink first.<br /> Disabled when iframe mode is ON."
+msgstr "Εάν επιλεγεί, ο χρήστης θα έχει τη δυνατότητα αποθήκευσης στοιχείων πιστωτικής κάρτας για μελλοντικές αγορές. Πρέπει πρώτα να επικοινωνήσετε με την Cardlink.<br /> Ανενεργό όταν η λειτουργία πληρωμής μέσω iframe είναι ενεργή."
+
+
+msgctxt "Languages::cardlink.enable_iframe"
+msgid "Enable payment iframe"
+msgstr "Ενεργοποίηση πληρωμής μέσω iframe"
+
+
+msgctxt "Languages::cardlink.enable_iframe_tip"
+msgid "Customers will stay in website to complete payments without redirecting to Cardlink's eCommerce payment page.<br />You must have a valid SSL certificate installed on your domain.<br />Not recommended bacause some functionality will be unavailable. For example, the customer won’t be able to subscribe for newsletters at checkout."
+msgstr "Οι πελάτες θα πραγματοποιήσουν την πληρωμή χωρίς να φύγουν από την σελίδα σας.<br />Θα πρέπει να έχετε ένα έγκυρο SSL certificate εγκατεστημένο στο domain σας. <br />Δεν συνίσταται γιατί μερικές λειτουργίες δεν θα είναι διαθέσιμες. Για παράδειγμα, ο πελάτης δεν θα μπορεί να κάνει εγγραφή στα newsletters κατά την ολοκλήρωση της παραγγελίας. "
+
+msgctxt "Languages::cardlink.language"
+msgid "Language"
+msgstr "Γλώσσα"
+
+
+msgctxt "Languages::cardlink.english"
+msgid "English"
+msgstr "Αγγλικά"
+
+
+msgctxt "Languages::cardlink.greek"
+msgid "Greek"
+msgstr "Ελληνικά"
+
+msgctxt "Languages::cardlink.test_live_mode"
+msgid "Test/Live mode"
+msgstr "Test/Live συνθήκες"
+
+
+msgctxt "Languages::cardlink.test"
+msgid "Test mode"
+msgstr "Test περιβάλλον"
+
+
+msgctxt "Languages::cardlink.live"
+msgid "Live mode"
+msgstr "Live περιβάλλον"
+
+
+msgctxt "Languages::cardlink.acquirer"
+msgid "Acquirer"
+msgstr "Επιλέξτε οργανισμό αποδοχής πληρωμών"
+
+
+msgctxt "Languages::cardlink.min_amount"
+msgid "Min Amount"
+msgstr "Ελάχιστο ποσό"
+
+
+msgctxt "Languages::cardlink.number_of_installments"
+msgid "Number of installments"
+msgstr "Αριθμός Δόσεων"
+
+
+
+msgctxt "Languages::cardlink.unexpected_error"
+msgid "Unexpected error received"
+msgstr "Μη αναμενόμενο σφάλμα"
+
+msgctxt "Languages::cardlink.preauth_expired"
+msgid "Preauthorized Transaction has expired"
+msgstr "Η προ-έγκριση έχει λήξει"
+
+msgctxt "Languages::cardlink.preauth_canceled"
+msgid "Merchant cancelled the pre-auth transaction"
+msgstr "Ο έμπορος ακύρωσε την προ-έγκριση"
+
+
+msgctxt "Languages::cardlink.unknown_error"
+msgid "Unknown error received"
+msgstr "Άγνωστο σφάλμα!"
+
+msgctxt "Languages::cardlink.digest_wrong"
+msgid "Digest was wrong! Possible fraud"
+msgstr "Η συμβολοσειρά της cardlink δεν συμφωνεί με την παραγώμενη! Πιθανή απάτη"
