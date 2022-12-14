@@ -107,7 +107,7 @@
                             <input class="input-small" type="text" value="{$set.amount}" name="payment_data[processor_params][installments][{$k}][amount]">
                         </td>
                         <td>
-                            <input class="input-small" type="text" value="{$set.doseis}" name="payment_data[processor_params][installments][{$k}][doseis]">
+                            <input class="input-small" type="number" min="1" max="60" value="{$set.doseis}" name="payment_data[processor_params][installments][{$k}][doseis]">
                         </td>
                         <td>
                             {include file="buttons/multiple_buttons.tpl" only_delete="Y" hide_clone='true' item_id="{$k}"}
@@ -122,7 +122,7 @@
                         <input class="input-small" type="text" value="{$set.amount}" name="payment_data[processor_params][installments][1][amount]">
                     </td>
                     <td>
-                        <input class="input-small" type="text" value="{$set.doseis}" name="payment_data[processor_params][installments][1][doseis]">
+                        <input class="input-small" type="number"  min="1" max="60" value="{$set.doseis}" name="payment_data[processor_params][installments][1][doseis]">
                     </td>
                     <td>
                         {include file="buttons/multiple_buttons.tpl" only_delete="Y" hide_clone='true' item_id="1"}

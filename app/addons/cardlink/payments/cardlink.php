@@ -185,6 +185,8 @@ if (defined('PAYMENT_NOTIFICATION')) {
 		$installments = $_REQUEST['installments'];
 	}
 
+    $installments = $installments <=60 ? $installments : '';
+
 	$offset = ($installments > 0) ? 0 : '';
 
 	$store_card = $_REQUEST['store_card'] ? true : false;
