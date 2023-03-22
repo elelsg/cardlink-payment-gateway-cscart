@@ -47,3 +47,7 @@ function fn_cardlink_uninstall(){
 	db_query("DELETE FROM ?:payments WHERE processor_id IN (SELECT processor_id FROM ?:payment_processors WHERE processor_script IN ('cardlink.php'))");
 	db_query("DELETE FROM ?:payment_processors WHERE processor_script IN ('cardlink.php')");
 }
+
+function fn_cardlink_get_payment_id(){
+	return db_get_field("SELECT payment_id FROM ?:payments WHERE processor_id IN (SELECT processor_id FROM ?:payment_processors WHERE processor_script IN ('cardlink.php'))");
+}
