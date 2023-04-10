@@ -15,6 +15,10 @@ if (defined('PAYMENT_NOTIFICATION')) {
 	$pp_response['reason_text'] = __('text_transaction_declined');
 	$order_id = !empty($_REQUEST['order_id']) ? (int)$_REQUEST['order_id'] : 0;
 
+
+
+
+
 	if ($mode == 'success' && !empty($_REQUEST['order_id'])) {
 		$order_info = fn_get_order_info($order_id);
 
@@ -54,6 +58,10 @@ if (defined('PAYMENT_NOTIFICATION')) {
 
 
 		if ($_REQUEST['digest'] === $digest) {
+
+
+
+
 			if ($_REQUEST['status'] == 'CAPTURED' || $_REQUEST['status'] == 'AUTHORIZED') {
 
 
@@ -125,6 +133,17 @@ if (defined('PAYMENT_NOTIFICATION')) {
 		}
 
 
+	}else{
+		$order_info = fn_get_order_info($order_id);
+
+
+
+
+		if($order_info['user_id']!=0){
+			fn_login_user($order_info['user_id']);
+		}else{
+			fn_form_cart($order_id,$_SESSION['cart'],$_SESSION['auth']);
+		}
 	}
 
 	if (fn_check_payment_script('cardlink.php', $order_id)) {
