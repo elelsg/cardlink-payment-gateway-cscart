@@ -1,13 +1,17 @@
 <?php
-session_start();
 
 /**
  * @var array $processor_data
  * @var array $order_info
  * @var string $mode
  */
-
 defined('BOOTSTRAP') or die('Access denied');
+use Tygh\Registry;
+use Tygh\Tygh;
+
+
+
+
 
 if (defined('PAYMENT_NOTIFICATION')) {
 	$pp_response = array();
@@ -69,6 +73,11 @@ if (defined('PAYMENT_NOTIFICATION')) {
 					fn_login_user($order_info['user_id']);
 				}
 
+
+				Tygh::$app['session']['auth']['order_ids'] = [$order_id];
+
+
+				$auth['order_ids'] = [$order_id];
 
 				$pp_response['order_status'] = 'P';
 				$pp_response['reason_text'] = __('transaction_approved');
