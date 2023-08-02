@@ -232,7 +232,7 @@ if (defined('PAYMENT_NOTIFICATION')) {
 		'payerEmail'  => $order_info['email'],
 
 		'billCountry'          => $country,
-		'billState'            => $state_code,
+		//'billState'            => $state_code,
 		'billZip'              => $order_info['b_zipcode'],
 		'billCity'             => $order_info['b_city'],
 		'billAddress'          => $order_info['b_address'],
