@@ -29,8 +29,8 @@ if (defined('PAYMENT_NOTIFICATION')) {
 		if (empty($processor_data)) {
 			$processor_data = fn_get_processor_data($order_info['payment_id']);
 		}
-
-		$post_data = array();
+		$xlsbonusdigest = '';
+		$post_data = $post_data_bonus = array();
 		$post_data_values = array(
 			'version',
 			'mid',
@@ -49,19 +49,72 @@ if (defined('PAYMENT_NOTIFICATION')) {
 			'extTokenExp',
 		);
 
-		foreach ($post_data_values as $post_data_value) {
-			if (isset($_REQUEST[$post_data_value])) {
-				$post_data[] = $_REQUEST[$post_data_value];
+
+
+
+
+		//EG: ALPHA Bonus
+		if($processor_data['processor_params']['acquirer']==1){ //EG: Only if Nexi
+			$post_data_values[] = 'xlsbonusadjamt';
+			$post_data_values[] = 'xlsbonustxid';
+			$post_data_values[] = 'xlsbonusstatus';
+			$post_data_values[] = 'xlsbonusdetails';
+			$post_data_values[] = 'xlsbonusawards';
+			$post_data_values[] = 'xlsbonusdigest';
+
+
+
+			if( array_key_exists( 'xlsbonusdigest', $_REQUEST ) ){
+				isset($_REQUEST['xlsbonusdigest']) ? $xlsbonusdigest = $_REQUEST['xlsbonusdigest'] : $xlsbonusdigest = '';
 			}
 		}
+
+
+		foreach ($post_data_values as $post_data_value) {
+			if (isset($_REQUEST[$post_data_value])) {
+
+				if ( ! in_array( $post_data_value, array( '_charset_', 'digest', 'submitButton', 'xlsbonusadjamt', 'xlsbonustxid', 'xlsbonusstatus', 'xlsbonusdetails', 'xlsbonusdigest' ) ) ) {
+					$post_data[] = $_REQUEST[$post_data_value];
+				}
+				if ( in_array( $post_data_value, array( 'xlsbonusadjamt', 'xlsbonustxid', 'xlsbonusstatus', 'xlsbonusdetails' ) ) ) {
+					$post_data_bonus[] = $_REQUEST[$post_data_value];
+				}
+
+
+			}
+		}
+
+
+
 
 
 		$form_secret = $processor_data['processor_params']['shared_secret'];
 		$form_data = iconv('utf-8', 'utf-8//IGNORE', implode("", $post_data)) . $form_secret;
 		$digest = base64_encode(hash('sha256', $form_data, true));
 
+		$failed = false;
 
-		if ($_REQUEST['digest'] === $digest) {
+		if($processor_data['processor_params']['acquirer']==1) { //EG: Only if Nexi
+
+
+			if(count($post_data_bonus)){
+				$failed = true;
+			}
+
+			$form_data_bonus = iconv('utf-8', 'utf-8//IGNORE', implode("", $post_data_bonus)) . $form_secret;
+			$digest_bonus = base64_encode(hash('sha256', $form_data_bonus, true));
+
+			if ($xlsbonusdigest != '') {
+				if ($xlsbonusdigest == $digest_bonus) {
+					$failed = false;
+				}
+			}
+		}
+
+
+
+
+		if (!$failed && $_REQUEST['digest'] === $digest) {
 
 
 
@@ -139,6 +192,18 @@ if (defined('PAYMENT_NOTIFICATION')) {
 		} else {
 			$pp_response['order_status'] = 'F';
 			$pp_response['reason_text'] = __("cardlink.digest_wrong");
+
+		}
+
+		if($pp_response['order_status']!='P'){
+			//EG: do not logout the user
+			$order_info = fn_get_order_info($order_id);
+
+			if($order_info['user_id']!=0){
+				fn_login_user($order_info['user_id']);
+			}else{
+				fn_form_cart($order_id,$_SESSION['cart'],$_SESSION['auth']);
+			}
 		}
 
 
@@ -213,7 +278,7 @@ if (defined('PAYMENT_NOTIFICATION')) {
 		$installments = $_REQUEST['installments'];
 	}
 
-    $installments = $installments <=60 ? $installments : '';
+	$installments = $installments <=60 ? $installments : '';
 
 	$offset = ($installments > 0) ? 0 : '';
 

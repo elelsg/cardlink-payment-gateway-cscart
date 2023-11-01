@@ -20,4 +20,4 @@ Once you have completed the requested tests and any changes to your website, you
 7.	A text field for providing the absolute or relative (to Cardlink Payment Gateway location on server) url of custom CSS stylesheet, to change css styles in payment page.
 8.	Translation ready for Greek & English languages.
 
-Developed by https://www.cardlink.gr
+Developed by https://www.e-growth.gr
