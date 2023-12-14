@@ -51,8 +51,6 @@ if (defined('PAYMENT_NOTIFICATION')) {
 
 
 
-
-
 		//EG: ALPHA Bonus
 		if($processor_data['processor_params']['acquirer']==1){ //EG: Only if Nexi
 			$post_data_values[] = 'xlsbonusadjamt';
@@ -96,11 +94,7 @@ if (defined('PAYMENT_NOTIFICATION')) {
 
 		if($processor_data['processor_params']['acquirer']==1) { //EG: Only if Nexi
 
-
-			if(count($post_data_bonus)){
-				$failed = true;
-			}
-
+			$failed = true;
 			$form_data_bonus = iconv('utf-8', 'utf-8//IGNORE', implode("", $post_data_bonus)) . $form_secret;
 			$digest_bonus = base64_encode(hash('sha256', $form_data_bonus, true));
 
@@ -110,8 +104,6 @@ if (defined('PAYMENT_NOTIFICATION')) {
 				}
 			}
 		}
-
-
 
 
 		if (!$failed && $_REQUEST['digest'] === $digest) {
@@ -262,6 +254,7 @@ if (defined('PAYMENT_NOTIFICATION')) {
 	$version = 2;
 	$trType = $processor_data['processor_params']['transaction_type'] == 'yes' ? 2 : 1;
 	$country = $order_info['b_country'];
+	$ship_country = $order_info['s_country'];
 	$state_code = $order_info['b_state'];
 
 	$amount = fn_format_price($order_info['total'], $processor_data['processor_params']['currency']);
@@ -286,6 +279,18 @@ if (defined('PAYMENT_NOTIFICATION')) {
 	$selected_card = $_REQUEST['cardlink_payment_gateway-card'] ? $_REQUEST['cardlink_payment_gateway-card'] : false;
 
 
+	$phone = $order_info['phone'];
+	if(!trim($phone)){
+		$phone = $order_info['b_phone'];
+		if(!trim($phone)){
+			$phone = $order_info['s_phone'];
+		}
+	}
+
+
+
+
+
 	$post_data = array(
 		'version'     => $version,
 		'mid'         => $processor_data['processor_params']['merchant_id'],
@@ -295,18 +300,24 @@ if (defined('PAYMENT_NOTIFICATION')) {
 		'orderAmount' => $amount,
 		'currency'    => $processor_data['processor_params']['currency'],
 		'payerEmail'  => $order_info['email'],
-
+		'payerPhone'  => $phone,
 		'billCountry'          => $country,
 		//'billState'            => $state_code,
 		'billZip'              => $order_info['b_zipcode'],
 		'billCity'             => $order_info['b_city'],
 		'billAddress'          => $order_info['b_address'],
+		'shipCountry'          => $ship_country,
+		'shipZip'              => $order_info['s_zipcode'],
+		'shipCity'             => $order_info['s_city'],
+		'shipAddress'          => $order_info['s_address'],
 		'trType'               => $trType,
 		'cssUrl'               => $processor_data['processor_params']['css_url'],
 		'extInstallmentoffset' => $offset,
 		'extInstallmentperiod' => $installments,
 		'confirmUrl'           => $confirm_url,
-		'cancelUrl'            => $cancel_url
+		'cancelUrl'            => $cancel_url,
+
+
 	);
 
 
@@ -320,6 +331,7 @@ if (defined('PAYMENT_NOTIFICATION')) {
 			}
 		}
 	}
+
 
 
 	$form_secret = $processor_data['processor_params']['shared_secret'];
