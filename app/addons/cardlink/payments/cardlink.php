@@ -92,7 +92,7 @@ if (defined('PAYMENT_NOTIFICATION')) {
 
 		$failed = false;
 
-		if($processor_data['processor_params']['acquirer']==1) { //EG: Only if Nexi
+		if($processor_data['processor_params']['acquirer']==1 && isset($_REQUEST['xlsbonusdigest'])) { //EG: Only if Nexi and only if the field was sent
 
 			$failed = true;
 			$form_data_bonus = iconv('utf-8', 'utf-8//IGNORE', implode("", $post_data_bonus)) . $form_secret;
