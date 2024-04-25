@@ -2,6 +2,23 @@
 
 Cardlink Payment Gateway allows you to accept payment through various schemes such as Visa, Mastercard, Maestro, American Express, Diners, Discover cards on your website.
 
+
+## Changelog
+
+* 1.0.3
+  * Fixed extra check if bank not send field
+
+* 1.0.2
+  * Added ship params
+  * Fixed invalid digest error
+
+* 1.0.1
+  * Added ALPHA Bonus
+
+* 1.0.0
+  * Initial release
+
+
 ## Description 
 
 Cardlink Payment Gateway allows you to accept payment through various schemes such as Visa, Mastercard, Maestro, American Express, Diners, Discover cards on your website, with or without variable installments.
@@ -20,4 +37,21 @@ Once you have completed the requested tests and any changes to your website, you
 7.	A text field for providing the absolute or relative (to Cardlink Payment Gateway location on server) url of custom CSS stylesheet, to change css styles in payment page.
 8.	Translation ready for Greek & English languages.
 
-Developed by https://www.e-growth.gr
+
+## Installation
+
+If you have a copy of the plugin as a zip file, you can manually upload it and install it through
+the “Manage Addons &gt; Manual Installation” admin page.
+This can be found by clicking the “Manual Installation” option as shown in the following
+image:
+   ![image001](https://developer.cardlink.gr/downloads/cardlink-payment-gateway-cscart-assets/image001.png)
+
+1. Upload cardlink.zip as shown in the following image:
+   ![image001](https://developer.cardlink.gr/downloads/cardlink-payment-gateway-cscart-assets/image001.png)
+2. After upload, you should locate the Cardlink addon in the addons list and click “Install”.
+3. Go to “Administration &gt; Payment methods ” and click the blue plus (+) button to create a
+   new payment method. Select “Cardlink” in the Processor select box and fill in all other fields
+   as appropriate.
+4. Click the &quot;Configure&quot; tab and then fill in the payment module settings as shown in the
+   following image:
+   ![image001](https://developer.cardlink.gr/downloads/cardlink-payment-gateway-cscart-assets/image001.png)
