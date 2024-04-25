@@ -47,11 +47,11 @@ image:
    ![image001](https://developer.cardlink.gr/downloads/cardlink-payment-gateway-cscart-assets/image001.png)
 
 1. Upload cardlink.zip as shown in the following image:
-   ![image001](https://developer.cardlink.gr/downloads/cardlink-payment-gateway-cscart-assets/image001.png)
+   ![image002](https://developer.cardlink.gr/downloads/cardlink-payment-gateway-cscart-assets/image002.png)
 2. After upload, you should locate the Cardlink addon in the addons list and click “Install”.
 3. Go to “Administration &gt; Payment methods ” and click the blue plus (+) button to create a
    new payment method. Select “Cardlink” in the Processor select box and fill in all other fields
    as appropriate.
 4. Click the &quot;Configure&quot; tab and then fill in the payment module settings as shown in the
    following image:
-   ![image001](https://developer.cardlink.gr/downloads/cardlink-payment-gateway-cscart-assets/image001.png)
+   ![image003](https://developer.cardlink.gr/downloads/cardlink-payment-gateway-cscart-assets/image003.png)
