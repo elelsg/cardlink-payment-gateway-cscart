@@ -275,8 +275,8 @@ if (defined('PAYMENT_NOTIFICATION')) {
 
 	$offset = ($installments > 0) ? 0 : '';
 
-	$store_card = $_REQUEST['store_card'] ? true : false;
-	$selected_card = $_REQUEST['cardlink_payment_gateway-card'] ? $_REQUEST['cardlink_payment_gateway-card'] : false;
+	$store_card = isset($_REQUEST['store_card']) && $_REQUEST['store_card'] ? true : false;
+	$selected_card = isset($_REQUEST['cardlink_payment_gateway-card']) && $_REQUEST['cardlink_payment_gateway-card'] ? $_REQUEST['cardlink_payment_gateway-card'] : false;
 
 
 	$phone = $order_info['phone'];
